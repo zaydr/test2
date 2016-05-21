@@ -2,7 +2,7 @@ from skimage import io
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import ndimage as ndi
-
+#added comment
 class Node(object):
 	def __init__(self, x, y):
 		self.visited = False
@@ -21,7 +21,7 @@ def find_cluster(n_map, x, y, cluster_list, edge_img):
 	while node_q:
 		n = node_q.pop()
 		cluster.append(n)
-		check_neighbors_2(n_map, n.x, n.y, node_q, edge_img,4)
+		check_neighbors_2(n_map, n.x, n.y, node_q, edge_img, 4)
 	cluster_list.append(cluster)
 
 
